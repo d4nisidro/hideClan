@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "hideclan",
+  "version": "${version}",
+  "name": "Hide Clan",
+  "description": "Oculta visualmente os membros da sua facção/clã (mesmo time do scoreboard) com um atalho de teclado (padrão K).",
+  "authors": ["Você"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.hideclan.HideClanClient"
+    ]
+  },
+  "mixins": [
+    "hideclan.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
