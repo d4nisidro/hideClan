@@ -16,13 +16,6 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"hideclan" {
-			sourceSet sourceSets.main
-		}
-	}
 }
 
 dependencies {
