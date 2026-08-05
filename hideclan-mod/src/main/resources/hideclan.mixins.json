@@ -4,7 +4,8 @@
   "package": "com.hideclan.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "EntityRendererMixin"
+    "EntityRendererMixin",
+    "EntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
