@@ -7,9 +7,13 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class HideClanClient implements ClientModInitializer {
+
+    private static final KeyBinding.Category HIDECLAN_CATEGORY =
+            KeyBinding.Category.create(Identifier.of("hideclan", "main"));
 
     private static KeyBinding toggleKey;
 
@@ -19,7 +23,7 @@ public class HideClanClient implements ClientModInitializer {
                 "key.hideclan.toggle",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_K,
-                "key.categories.hideclan"
+                HIDECLAN_CATEGORY
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
