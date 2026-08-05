@@ -32,4 +32,15 @@ public class EntityRendererMixin {
             cir.setReturnValue(false);
         }
     }
+
+    @Inject(method = "hasLabel", at = @At("HEAD"), cancellable = true)
+    private void hideclan$hasLabel(
+            Entity entity,
+            double squaredDistanceToCamera,
+            CallbackInfoReturnable<Boolean> cir
+    ) {
+        if (entity instanceof PlayerEntity player && HideClanState.shouldHide(player)) {
+            cir.setReturnValue(false);
+        }
+    }
 }
