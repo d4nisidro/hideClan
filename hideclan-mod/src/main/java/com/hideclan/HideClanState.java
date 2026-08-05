@@ -2,7 +2,6 @@ package com.hideclan;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.scoreboard.AbstractTeam;
 
 /**
  * Guarda se o "Hide Clan" está ativo e decide se um jogador deve ser
@@ -33,8 +32,8 @@ public class HideClanState {
             return false;
         }
 
-        AbstractTeam myTeam = client.player.getScoreboardTeam();
-        AbstractTeam otherTeam = player.getScoreboardTeam();
+        var myTeam = client.player.getScoreboardTeam();
+        var otherTeam = player.getScoreboardTeam();
 
         if (myTeam == null || otherTeam == null) {
             return false;
